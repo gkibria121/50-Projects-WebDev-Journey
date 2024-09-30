@@ -1,0 +1,226 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Basic style reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+:root{
+    --color-primary :lightpink ;
+    --box-shadow-1 : 1px 2px 4px rgba(0 ,0,0,.1);
+    --color-text : #353935;
+    --transition-duration : .5s;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    font-size: 1.6rem;
+    color: var(--color-text);
+    background-color: #FAF9F6;
+    overflow-x: hidden;
+}
+
+.header{
+    width: 100vw;
+    height: 15vh;  
+    display: flex;
+    flex-direction: column; 
+
+}
+.header .header__logo{ 
+    background-color: var(--color-primary);
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+.header .header__location{ 
+    background-color: white;
+    padding: 1rem;
+    font-size: 1.4rem;
+
+}
+.header .header__location .fa-home{
+    font-size: 1.8rem;
+
+}
+.main{
+     background-color: transparent; 
+     width: 100%;
+     margin: 1.5rem auto;
+     
+}
+.main .heading-3{
+    text-align: center;
+    font-size: 3rem;
+    color: #818589;
+    margin-bottom: 1.5rem;
+}
+.main .faq{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 2em;
+    min-width: 60rem ;
+    background-color: transparent;
+}
+.faq .faq__level, .faq .faq__content{
+    
+    border-radius: 5px;
+}
+
+.faq .faq__level{
+    
+    min-width: 20rem;
+    padding: 1rem;
+    height: fit-content;
+    padding: 1.5rem;
+    background-color: white; 
+    box-shadow: var(--box-shadow-1)
+ 
+}
+@media screen and (max-width : 60rem) {
+    .faq .faq__level{ 
+        display: none;
+    }
+}
+
+.faq .faq__level-list {
+    display: grid;
+    grid-template-columns: 1rem 1fr;
+    margin: 1.5rem 2rem;
+    grid-row-gap: 1rem;
+    grid-column-gap: 2rem;
+}
+.faq .faq__level-heading{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+     
+   
+}
+.faq .faq__content{
+   flex-basis: 60%; 
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+  
+}
+
+.faq .faq__search-box,.faq .faq__question{
+    background-color: white; 
+    border-radius: 5px;
+    box-shadow: var(--box-shadow-1);
+    position:relative;
+    color: var(--color-text);
+    overflow: hidden;
+    
+}
+.faq .faq__answer{
+    /* padding: 1.5rem; */
+    overflow: hidden;
+}
+.faq__question > *{
+ padding: 1.5rem;
+}
+.faq__header{
+    position: relative;
+    z-index: 100;
+    background-color: white;
+    
+} 
+.faq__question .faq__header .faq__question-title{
+     color: var(--color-text);
+     transition: all var(--transition-duration) ease;
+} 
+.faq__question.active .faq__header{
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid black;
+    margin-bottom: 1rem; 
+    
+} 
+.faq .faq__header .faq__question-button{
+    position: absolute;
+    top: 1.7rem;
+    right: 1.8rem;
+    font-size: 2.4rem; 
+    transition: transform var(--transition-duration) ease;
+    transform-origin: center;
+    cursor: pointer;
+}
+.faq__question.active .faq__header .faq__question-button{
+    transform: rotate(-180deg);
+}
+.faq__answer, .faq__footer { 
+    overflow: hidden;   
+    max-height: 0;
+    transform: translateY(-40rem);
+    padding: 0;
+    transition: all .8s ease;
+    position: relative;
+    z-index: 1;
+
+}
+
+.faq__question.active .faq__answer, .faq__question.active .faq__footer {
+    max-height: 50rem; /* Set based on content size */
+    opacity: 1; /* Make the element visible */  
+    transform: translateY(0rem);
+    padding: 1.5rem;
+
+}
+
+
+
+.faq .faq__footer{
+    margin-left: 1rem;
+}
+
+.faq .faq__footer .faq__emojis{
+    margin-top: 1rem;
+    color: black;
+    display: flex;
+    gap: 1.2rem;
+}
+.faq .faq__footer h5{
+    cursor:auto ;
+}
+.faq .faq__footer > *{
+    cursor: pointer;
+}
+
+.faq .faq__search-box{
+    display: flex;
+    height: 4.5rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.faq .faq__search-box .faq__search-input{
+    height: 100% ;
+    width: 75%;
+    border: none;
+    padding: 0 1.5rem;
+    font-size: 1.8rem;
+}
+
+.faq .faq__search-box .faq__search-input:focus, .faq__search-input:valid , .faq__search-buton:focus{
+    outline: none;
+    
+}
+.faq .faq__search-box .faq__search-buton{
+    height: 100% ;
+    width: 25%; 
+    border: none;
+    font-size: 2rem;
+    background-color:  var(--color-primary);
+    color: white;
+
+}
