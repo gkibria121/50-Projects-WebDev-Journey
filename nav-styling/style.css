@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.25%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: "Mulish",sans-serif;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #F0FFFF 50%,steelblue 50%);
+    justify-content: center;
+    align-items: center;
+
+}
+ 
+
+
+.nav{
+   display: flex;
+   background-color: white;
+   align-items: center; 
+   padding: 1.5rem 2.5rem;
+   border-radius: 5px;
+   box-shadow: 1px 2px 8px rgba(0,0,0,.1);
+   overflow: hidden;
+   align-items: center;   
+   width: 7rem;
+   transition: width .6s linear;
+    
+}
+
+.nav .nav__item{
+    list-style-type: none;
+    cursor: pointer;
+}
+ 
+.nav__button {
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.line {
+    position: absolute;
+    left: 50%; 
+    width: 2rem;
+    height: 2px;
+    background-color: steelblue;
+    transform-origin: center;
+    transition: all .6s linear;
+}
+.line--1{
+    top: 25%;
+    transform: translate(-50%,-50%)  ;
+}
+.line--2{
+    top: 75%;
+    transform: translate(-50%,-50%)  ;
+}
+
+.nav.active{ 
+    width: 35rem;
+}
+ 
+.nav .nav__list{   
+    transform: translateX(35rem);
+    transition: transform .6s linear,width .6s linear;
+    display: flex;
+    width: 0;  
+    gap: 1rem;     
+    justify-content: center;
+}
+.nav.active .nav__list{
+    width: 100%;  
+    transform: translateX(0); 
+}
+ 
+.nav.active .line--1 {
+    transform: translate(-50%,-50%) rotate(-225deg); 
+    top: 50%; 
+}
+
+.nav.active .line--2 {
+    transform: translate(-50%,-50%) rotate(225deg);
+    top: 50%;
+   
+}
