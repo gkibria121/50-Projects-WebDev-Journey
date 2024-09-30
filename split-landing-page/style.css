@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+*{
+    box-sizing: border-box;
+}
+:root{
+    --left-bg-color-code : 134, 58, 158;
+    --left-bg-color :rgb(191, 111, 216);
+    --right-bg-color :  rgb(36, 31, 31);
+}
+html{
+    font-size: 62.25%;
+}
+body{
+    font-family: "Robot",sans-serif;
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+
+}
+.split{  
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    color:white;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease; 
+}
+.left{ 
+    flex-grow: 1;
+    background-image:  linear-gradient(rgba( var(--left-bg-color-code), 0.1), rgba(var(--left-bg-color-code), 0.1))
+    ,  url(./img/martin-katler-caNzzoxls8Q-unsplash.jpg);
+}
+.right{ 
+    flex-grow: 1;
+    background-image: url(./img/albie-patacsil-8ox5m73ny-c-unsplash.jpg);
+}
+
+ .flex-grow{
+    flex-grow: 3;
+ }
+ .flex-grow.left .btn:hover{
+    border:  var(--left-bg-color);
+    background-color:  var(--left-bg-color);
+ }
+ .flex-grow.right .btn:hover{
+    border:  var(--right-bg-color);
+    background-color:  var(--right-bg-color);
+ }
+.btn{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 2rem 4rem; 
+    cursor: pointer;
+    text-transform: uppercase;
+}

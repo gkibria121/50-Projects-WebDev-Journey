@@ -1,0 +1,50 @@
+html{
+    font-size: 62.25%;
+}
+
+body{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+*{
+    box-sizing: inherit; 
+
+}
+.container{
+    display: flex;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    gap: 2rem;
+    
+    width: 90vw;
+}
+
+.panel{
+    height: 80vh;
+    border-radius: 5rem;
+    flex-grow: 0.5;
+    position: relative;
+    color: white;
+    
+    transition: flex-grow .5s ease-in;
+
+}
+.panel h1 {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    opacity: 0;
+    transition: opacity .2s ease-in .3s;
+}
+
+ .active{
+    flex-grow: 5;
+}
+.active h1{
+    opacity: 1;
+}

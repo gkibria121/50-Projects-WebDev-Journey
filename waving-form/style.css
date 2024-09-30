@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+html{
+    font-size: 62.25%;
+}
+*{
+    box-sizing: border-box;
+}
+:root{
+    --primary-color : steelblue ;
+    --color-primary-light : lightblue; 
+}
+body{
+    font-size: 1.6rem;
+    background-color:   var(--primary-color);
+    font-family: "Roboto";
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    display: block;
+    border: none;
+    width: 100%;
+    padding: 1.5rem;
+    background-color:lightblue ;
+    border-radius: 5px;
+}
+.btn:active{
+    transform: scale(.98);
+}
+.btn:focus{
+    outline: none;
+}
+.text {
+    margin-top: 3rem;
+}
+.text a{
+    text-decoration: none;
+    color: lightblue;
+
+}
+
+.container{
+    color: white;
+    background-color: rgba(0, 0, 0, .4);
+    padding: 2rem 4rem;   
+    border-radius: 5px;
+}
+.form-control{
+    margin-bottom: 4rem;
+    position: relative;
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.form-control input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;  
+    display: block;
+    width: 100%;
+    font-size: 1.8rem;
+    padding: 1.5rem 0;
+}
+.form-control input:focus  {
+    border-bottom-color: lightblue;
+}
+.form-control input:focus + label span{
+    display: inline-block;
+    color: lightblue;
+    transform: translateY(-3rem);
+    transition: transform .2s ease;
+}
+
+.form-control input:focus,.form-control input:valid{
+    outline: none;
+}
+.form-control label{
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+}
