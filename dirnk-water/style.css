@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.25%;
+
+}
+body{
+    font-size: 1.6rem;
+    font-family: "Open Sans",sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: 	#0e87cc	;
+    color: white;
+}
+
+.container{
+    max-width: 80rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.container h5{
+    margin: 1rem 0;
+}
+.container p{
+    margin: 1rem 0;
+}
+ .glass{
+    border: 3px solid #1434A4;
+    padding: 1rem;
+    color:#1434A4 ;
+    background-color: white;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    text-align: center; 
+    cursor: pointer;
+    overflow: hidden;
+}
+.glass.glass--large{
+    width: 15rem;
+    height: 30rem;
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s ease;
+
+}
+
+.glasses{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 1rem;
+    grid-column-gap: .5rem;
+    margin-top: 1rem;
+}
+
+.glass.drank{
+    background-color:	#89CFF0 ;
+    color: white;
+}
+.glass.glass--large{
+    /* background-image: linear-gradient(to top, #89CFF0 0%,white 0%);
+     */
+     padding: 0;
+ 
+}
+.remained__text-container,#per{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    transition: all .4s ease;
+}
+.remained__text-container{
+    flex-grow: 1;
+}
+#per{ 
+    /* flex-basis: 0%;  */
+    background-color: #89CFF0;
+    width: 100%;
+}
