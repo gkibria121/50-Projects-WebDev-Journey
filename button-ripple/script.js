@@ -5,13 +5,9 @@ rippleBtns.forEach(btn => { btn.addEventListener('click',rippleEffect)})
 
 
 function rippleEffect(event) {
-    
-    const el = event.target;
-    if(!el.tagName=="BUTTON"){
-        el = event.closest('.btn.btn-ripple');
-    }
-    const rect = el.getBoundingClientRect(); 
-    
+     
+     
+    const rect = this.getBoundingClientRect();  
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
 
@@ -19,7 +15,7 @@ function rippleEffect(event) {
     spanEl.style.top = `${y}px`;
     spanEl.style.left = `${x}px`;
 
-    el.appendChild(spanEl)
+    this.appendChild(spanEl)
 
     setTimeout(()=>{
         spanEl.remove();
