@@ -1,0 +1,60 @@
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.25%;
+}
+
+body{
+    font-size: 1.6rem;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    padding: 1rem 1.5rem;
+    background-color: blueviolet;
+    color: inherit;
+    font-size: 1.5rem;
+    border: none;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn.btn-ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn.btn-ripple span { 
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10rem;
+    height: 10rem; 
+    border-radius: 50%; 
+    background-color: white;
+    transform: translate(-50%, -50%) scale(0); 
+    animation: scale 1s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3); 
+        opacity: 0;
+    }
+}
