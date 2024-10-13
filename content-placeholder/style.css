@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+html{
+    font-size: 62.25%;
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    font-family: "Roboto",sans-serif;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
+
+.card{
+    max-width: 35rem;
+    width: 35rem;
+    background-color: 		#ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 4px 10px rgba(0,0,0,.2);
+    color: rgb(138, 138, 138);
+}
+
+.card .card__header{
+    width: 100%;
+    height: 18rem;
+}
+.card .card__content{
+    padding: 1rem 2rem;
+}
+.card .card__title{
+    color: black;
+    margin-bottom: .5rem;
+}
+
+.card__img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+ .author{
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+ }
+
+ .author__img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+ }
+ .author__info{
+    display: flex;
+    flex-direction: column; 
+    margin-top: .5rem;
+ }
+ .author__info small{
+    font-size: 1rem;
+   
+    margin-top: .5rem;
+ }
+
+ .author__info .author__name{
+    color: black;
+ }
+ 
+ .animated-bg.animated-bg--text{
+    display: block;
+    margin: .5rem 0rem;
+    border-radius: 5px;
+ }
+ .animated-bg--text-sm{
+    width: 10rem;
+    height: 1rem;
+ }
+ .mb-4{
+    margin-bottom: 4rem !important;
+ }
+
+.animated-bg{
+    background-image: linear-gradient(to right, lightgray 25%, rgb(175,175,175) 50%, lightgray 75%);
+    background-size: 200% 100%;
+    animation: loading 5s linear infinite;
+
+}
+
+
+@keyframes loading {
+    0%{
+        background-position: 200% 100%;
+    }
+    100%{
+        background-position: -200% 100%;
+    }
+    
+}
