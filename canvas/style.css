@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.25%;
+}
+
+body {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem; 
+  height: 100vh;
+  overflow: hidden;
+}
+
+.canvas {
+  border: 2px solid steelblue;
+  border-bottom: 2px solid cornflowerblue; 
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+}
+
+.toolbox {
+  display: flex; 
+  width: 80.6rem;
+  background-color: cornflowerblue;
+  justify-content: space-around;
+  padding: 1rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.toolbox > * {
+  padding: 0.8rem 1rem;
+    height: 3.5rem;
+  border: 2px solid steelblue;
+  border-radius: 3px;
+  margin-left: 1rem;
+  background-color: white;
+  cursor: pointer;
+} 
+.toolbox > *:last-child {
+  margin-left: auto; 
+}
