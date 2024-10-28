@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+html{
+    font-size: 62.25%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.6rem;
+    font-family: "Oswald",sans-serif;
+}
+
+.container{
+    max-width: 80rem; 
+    margin: 1rem auto; 
+}
+
+.card{
+    width: 27rem;
+    text-align: center;
+    user-select: none;
+}
+.card .card-title{
+    font-size: 1.7rem;
+}
+.card .card-count-text{
+    margin-top: .5rem;
+    font-size: 1.4rem;
+} 
+.card .card-image{
+    width: 100%;
+    height: 35rem; 
+    background-image: url(./img/mathieu-renier-4WBvCqeMaDE-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: 2rem; 
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 14px 28px rgba(0, 0, 0, .25);
+}
+
+.icon.icon--heart::after{
+    content : "❤";
+    color: red;
+}
+ 
+.animate{
+    color: red; 
+    opacity: 1;
+    position: absolute; 
+    z-index: 100; 
+    transform: translate(-50%,-50%) scale(0);
+    animation : heartGrow .5s ease-in;
+}
+
+
+@keyframes heartGrow {
+    0%{
+        transform: translate(-50%,-50%) scale(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-50%,-50%) scale(10);
+        opacity: .1;
+    }
+    
+}
