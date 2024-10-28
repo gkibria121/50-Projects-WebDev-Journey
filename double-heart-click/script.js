@@ -12,7 +12,7 @@ cardImage.addEventListener('dblclick',(event)=>{
     heartCountEl.innerText = ++times;
     setTimeout(()=>{
         heartEl.remove(); 
-    },1500)
+    },1000)
     
 })
  
