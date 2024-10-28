@@ -14,19 +14,13 @@ cardImage.addEventListener('dblclick',(event)=>{
     heartEl.style.left = `${x}px`;
     cardImage.appendChild(heartEl);
     
-    updateCount()
+    heartCountEl.innerText = ++times;
     setTimeout(()=>{
         heartEl.remove(); 
     },1500)
     
 })
-
-
-
-function updateCount(){
-    times++;
-    heartCountEl.innerText = times;
-}
+ 
 
 
 function createHeart(){
