@@ -63,14 +63,26 @@ body{
 }
 .note .body{
     background-color: white;
-    width: 100%;
-    border: none;
-    padding: 1rem;
-    font-family: inherit;
-    resize: none; 
+    width: 100%; 
+    padding: 4rem; 
+    height: 40rem;
+
+    
+} 
+.note.edit textarea  {
+    display: block;
+    visibility: visible;
     
 }
-.note .body:focus{
+.note textarea {
+    display: none;
+    border: none; 
+    visibility: hidden;
+}
+.note textarea:focus {
     outline: none;
-    
+}
+
+.note.edit div.body{
+    display: none;
 }
