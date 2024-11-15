@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    font-size: 62.25%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+body{
+    font-size: 1.6rem;
+    font-family: "Poppins",sans-serif;  
+
+}
+.element-center{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.hide{
+    transform: translate(-50%,-50%) scale(0);
+    animation: hide .5s ease-in-out;
+}
+
+
+.final{
+    text-align: center;
+    transform: translate(-50%,-50%) scale(0);
+}
+.final .replay{
+    padding: .5rem 1rem;
+}
+.final h1{
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+.show {
+    transform: translate(-50%,-50%) scale(1);
+    animation: show .5s ease-in-out;
+}
+.counter h2{
+    text-transform: uppercase;
+}
+.counter .nums{
+    height: 5rem;
+    position: relative;
+    overflow: hidden;
+}
+.counter .nums span{
+    position: absolute;
+    color: steelblue;
+    font-size: 5rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(120deg);
+    transform-origin: bottom center;
+}
+
+.counter .nums span.in{
+    transform: translate(-50%,-50%) rotate(0deg);
+    animation: goIn .5s ease-in-out;
+}
+.counter .nums span.out{
+    transform: translate(-50%,-50%) rotate(120deg);
+    animation: goOut .5s ease-in-out;
+}
+
+@keyframes show {
+    0%{
+        transform: translate(-50%,-50%) scale(0);
+    }
+    60%{
+        transform: translate(-50%,-50%) scale(1.2);
+    }
+    100%{
+        transform: translate(-50%,-50%) scale(1);
+    }
+    
+}
+
+@keyframes hide {
+    0%{
+        transform: translate(-50%,-50%) scale(1);
+    }
+    
+    100%{
+        transform: translate(-50%,-50%) scale(0);
+    }
+    
+}
+
+@keyframes goIn {
+    0%{
+        transform: translate(-50%,-50%) rotate(120deg);
+    }
+    50%{
+        transform: translate(-50%,-50%) rotate(-20deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    
+}
+@keyframes goOut {
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    50%{
+        transform: translate(-50%,-50%) rotate(20deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(-120deg);
+    }
+    
+}
