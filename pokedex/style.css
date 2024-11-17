@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+    font-size: 62.25%;
+}
+ 
+body{
+    font-size: 1.5rem;
+    width: 100vw; 
+    padding: 2rem;
+    padding-top: 15%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Lato',sans-serif;
+    background-image: linear-gradient(to right,#d4d3dd, #efefbb ) ;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.heading{
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+}
+.pokemon{
+    background-color: rgb(252, 255, 209);
+    padding: 2rem 0rem;
+    border-radius: 10px;
+    box-shadow: 2px 0px 10px rgba(0,0,0,.1);
+
+    max-width: 100%;
+    width: 15rem;
+    text-align: center;
+
+}
+
+.pokemon .pokemon__id{
+    background-color: rgba(199, 223, 198, 0.6);
+    border-radius: 40px;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    width: fit-content;
+    margin: 0 auto;
+}
+.pokemon .pokemon__name{
+    font-size: 1.8rem;
+    margin: 1rem 0rem;
+}
+.pokemon .pokemon__img-container{ 
+    background-color: rgba(255, 255, 247, 0.6);
+    border-radius: 50%;
+    width: 11rem;
+    height: 11rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    
+}
+.pokemon .pokemon__img{
+    width: 100%;
+}
+ 
+.pokemon .pokemon__type{
+    margin-top: 1rem; 
+    font-size: 1.3rem;
+}
+
+
+
+.pokemon.grass{
+    background-color: rgb(222, 253, 214);
+}
+ 
+
+.pokemon.fire{
+    background-color: rgb(253, 246, 214);
+}
+ 
+
+.pokemon.water{
+    background-color: rgb(214, 230, 253);
+}
+ 
+
+.pokemon.bug{
+    background-color: rgb(187, 187, 187);
+}
+ 
