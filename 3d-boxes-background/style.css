@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppines:ital,wght@0,300..800;1,300..800&display=swap");
+html {
+  font-size: 62.25%;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppines", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  background-color: rgb(255, 160, 19);
+  border: none;
+  padding: 1rem;
+  color: white;
+  border-radius: 2px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.btn:active {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+.btn:focus {
+  outline: none;
+}
+
+.magic {
+  position: fixed;
+  z-index: 100;
+  top: 5rem;
+}
+.boxes {
+  width: 50rem;
+  height: 50rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.boxes .box {
+  width: 12.5rem;
+  height: 12.5rem; 
+  transition: all 0.4s ease;
+  position: relative;
+  background-image: url(https://i.giphy.com/QZdI4k7q1BsSk.webp);
+  background-size: 50rem 50rem;
+  background-repeat: no-repeat;  
+
+}
+
+.boxes.big {
+  width: 60rem;
+  height: 60rem;
+}
+.boxes.big .box {
+  transform: rotate(360deg);
+}
+
+.box::after  {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  right: -15px;
+  top: 8px;
+  background-color: rgb(255, 126, 21);
+  transform: skewY(45deg);
+}
+.box::before  {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 100%;
+  bottom: -15px;
+  left: 8px; 
+  background-color: rgb(255, 160, 19); 
+
+  transform: skewX(45deg);
+}
+
+ 
