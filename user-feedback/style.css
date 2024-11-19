@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.25%;
+}
+body{
+    font-family: "Robot",sans-serif;
+    font-size: 1.6rem; 
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 246, 230);
+
+
+}
+
+.container{
+ 
+    max-width: 50rem; 
+    background-color: white; 
+    width: 40rem; 
+    box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+   
+ 
+} 
+.feedback,.message  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem;
+    gap: 5rem;
+    text-align: center;
+}
+.message{
+    gap: 1.5rem;
+    line-height: 1.4;
+    display: none;
+}
+.emojis{
+    display: flex;
+    width: 100%;
+    justify-content: space-around
+}
+
+
+.emojis .emoji-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+  .emoji{
+    font-size: 5rem;
+    
+}
+.emoji-container:hover   {
+  
+    transform: scale(1.4);
+}
+.emoji-container.active{
+    transform: scale(1);
+  box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+}
+.btn{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-family : inherit;
+
+    border-radius: 3px;
+}
+.btn:hover{
+    outline: none;
+    transform: scale(1.1);
+
+}
+.btn:active{
+    transform: translateY(2px) scale(1.1);
+}
+
+.container.hide .feedback{
+    display: none;
+}
+.container.hide .message{
+    display: flex;
+}
