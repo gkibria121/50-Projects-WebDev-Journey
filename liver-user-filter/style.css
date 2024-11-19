@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+    font-size: 62.25%;
+}
+ 
+body{
+    font-size: 1.6rem;
+    width: 100vw; 
+    height: 100vh;
+    padding: 2rem;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto',sans-serif; 
+    background-color: 	#ebe9e9;
+}
+
+
+.container{
+    width: 30rem;
+    height: 50rem; 
+    border-radius: 5px;
+    overflow: hidden;
+  
+}
+
+.filter-box{
+    background-color: rgb(12, 89, 255);
+    padding: 2rem 3rem;
+    color: white;
+
+}
+.filter-box h4{
+    margin-top: 1rem;
+}
+
+.filter-box small{
+    font-size: 1.2rem; 
+    margin-top: 5px; 
+}
+.filter-box .search{
+    width: 100%; 
+    margin-top: 1.5rem;
+    margin-bottom: .5rem ;
+    display: inline-block;
+    border-radius: 40px;
+    padding: 1rem 1.5rem;
+    height: 3rem;
+    border: none;
+    background-color: rgba(0, 0, 0, .3);
+    color: white;
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    font-family: inherit;
+}
+.filter-box .search::placeholder{
+    color: rgb(180, 180, 180);
+    font-family: inherit;
+}
+.filter-box .search:focus{
+    outline: none;
+}
+
+.filter-box .search::selection{
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.user-list{
+    background-color: white; 
+    list-style: none; 
+    overflow: auto;
+    height: calc(100% - 10rem);
+
+}
+
+.user{ 
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ebe9e9;
+    margin-bottom: 1rem;
+}
+.user .profile_image{
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: contain;
+
+}
+
+/* For webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 10px; 
+    height: 5px;  
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Rounded corners for the thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Change color on hover */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the track */
+  }
+  
+  /* For Firefox */
+  .scrollable-container {
+    scrollbar-width: thin; /* Can be 'auto', 'thin', or a custom size */
+    scrollbar-color: #888 #f1f1f1; /* Thumb color and track color */
+  }
