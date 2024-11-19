@@ -3,17 +3,28 @@ const reviewButton = document.querySelector('.btn')
 const container = document.querySelector('.container')
 const reviewEl = document.querySelector('#review')
 const reveiw = document.getElementById('reveiw')
-emojis.forEach(emoji=>
-    emoji.addEventListener('click',handleClick)
-)
+const ratings = document.querySelector('.ratings')
+ 
+
+
+ratings.addEventListener('click',handleClick)
+ 
 reviewButton.addEventListener('click',()=>{
+
     container.classList.add('hide')
   
 
 })
 function handleClick(event){
+    
+    const target = event.target;
+  
+    
+    if(target.parentNode.classList.contains('emoji-container')){ 
+        return 
+    } 
     document.querySelectorAll('.active').forEach(el=>el.classList.remove('active'))
-    this.classList.add('active')
-    reveiw.innerText =  this.querySelector('.emoji-name').innerText
+    target.parentNode.classList.add('active')
+    reveiw.innerText =  target.parentNode.querySelector('.emoji-name').innerText
 
 }
