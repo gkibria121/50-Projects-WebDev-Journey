@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    font-size: 62.25%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+body{
+    font-size: 1.6rem;
+    font-family: "Poppins",sans-serif; 
+    height: 100vh;
+    width: 100vw;   
+}
+ 
+
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+.logo{
+    fill: red;
+    width: 15rem;
+
+}
+.title{
+    font-size: 2rem;
+    display: inline-block;
+    margin-top: .8rem;
+    text-transform: uppercase;
+}
+.nav{
+    position: fixed;
+    width: 40rem;
+    height: 100vh;
+    padding: 2rem 3rem;
+    text-transform: uppercase;
+    background-color: white;
+    z-index: 100;
+    transform: translate(0);
+    transition: transform .4s ease;
+    transition-delay: .4s;
+}
+.nav .header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    color: rgb(134, 134, 134);
+}
+.nav .nav-items{
+    margin-top: 1rem;
+    list-style: none;
+    display: block;
+
+}
+.nav .nav-items li:not(:last-child){
+    margin-bottom: 1rem;
+
+}
+.nav .nav-items.nav-items--sub{
+    margin-left: 2.5rem;
+
+}
+
+.layer-1,.layer-2{ 
+    display: block;
+    position: absolute;
+    transition: transform .4s ease;
+    height: 100vh; 
+}
+.layer-1{
+    width: 42rem; 
+    background-color: red;
+    z-index: 1;
+    transition-delay: .2s;
+    
+}
+.layer-2{
+    width: 44rem;
+    background-color: black; 
+
+}
+.fa-xmark{
+    cursor: pointer;
+}
+
+.nav.hide + .layer-1, .nav.hide + .layer-1 +  .layer-2,.nav.hide{
+    transform: translateX(-100%);
+}
+
+.nav.hide{
+    transition-delay: 0s;
+}
+nav.hide + .layer-1 +  .layer-2 {
+    transition-delay: .4s;
+}
+nav.hide + .layer-1  {
+    transition-delay: .2s;
+}
+
+
+
+
+.toggle{
+    position: fixed;
+    left: 4rem;
+    top: 4rem;
+    cursor: pointer;
+}
