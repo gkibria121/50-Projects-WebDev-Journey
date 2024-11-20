@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    font-size: 62.25%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+body{
+    font-size: 1.6rem;
+    font-family: "Poppins",sans-serif; 
+    height: 100vh;
+    width: 100vw;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right bottom , white, rgb(200, 204, 255) );
+}
+
+.content{
+    background-color: white;
+    border-radius: 5px;
+    max-width: 40rem;
+    overflow: hidden;
+}
+.quiz-container{
+
+    padding: 4rem; 
+
+}
+.quiz-container .quiz{
+    text-align: center;
+    margin: 2rem 0rem;
+}
+.btn{
+  
+    padding: 1.5rem;
+    font-size: 1.7rem;
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    background-color: rgb(165, 44, 165);
+    color: white;
+    cursor: pointer;
+
+ 
+}
+
+.btn:hover{
+ background-color:rgb(119, 34, 119);
+
+}
+input[type='radio'] , input[type='radio']+ label{
+    cursor: pointer;
+}
+.ans-box{
+    margin: 1rem 0rem;
+    display: flex;
+    gap: .5rem;
+}
+.ans-box label{
+    display: inline-block;
+    width: 100%;
+}

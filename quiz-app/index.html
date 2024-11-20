@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Quiz App</title>
+  </head>
+  <body>
+
+
+    <form class="content" id="quiz-form">
+      <div class="quiz-container">
+        <h3 class="quiz" for="quiz">Which language runs in a web browser?</h3>
+        <div class="ans-box">
+          <input type="radio" name="quiz" id="a" />
+          <label for="a">Java</label>
+        </div>
+        <div class="ans-box">
+          <input type="radio" name="quiz" id="b" />
+          <label for="b">C</label>
+        </div>
+        <div class="ans-box">
+          <input type="radio" name="quiz" id="c" />
+          <label for="c">Python</label>
+        </div>
+        <div class="ans-box">
+          <input type="radio" name="quiz" id="d" />
+          <label for="d">Javascript</label>
+        </div>
+      </div>
+
+      <button class="btn">Submit</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
