@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    font-size: 62.25%;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+body{
+    font-size: 1.6rem;
+    font-family: "Poppins",sans-serif; 
+    height: 100vh;
+    width: 100vw;   
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.container{
+    background-color: rgb(80, 80, 245);
+    color: white;
+    max-width: 60rem;
+    border-radius: 10px;
+    padding: 3rem 6rem;
+}
+
+.progress{
+    height: 5px;
+    border-radius: 50px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 1rem;
+    animation: grow 10s linear infinite;
+ 
+}
+.testimonial{
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    position: relative; 
+}
+
+.testimonial::after,.testimonial::before{
+    font-family: 'Font Awesome 5 Free'; /* Ensure you use the correct Font Awesome font family */
+    font-weight: 900; /* Use appropriate font-weight for the Font Awesome icon */
+    font-size: 4rem; 
+    opacity: .5;
+    color: white;
+    position: absolute;
+    transform: translateY(-20%);
+    top: 0;
+}
+.testimonial::after {
+    content: '\f10d'; /* Font Awesome left quote */ 
+    right: -4.1rem;
+}
+
+.testimonial::before {
+    content: '\f10e'; /* Font Awesome right quote */ 
+    left:  -4.1rem;
+}
+.profile{
+    display: grid;
+    width: 10rem;
+    margin: 0 auto;
+    grid-template-columns:  repeat(2,1fr);
+    grid-template-rows:  repeat(2,1fr);
+}
+.profile img{
+    grid-row: 1/-1;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem; 
+    margin-right: 1rem;
+}
+.profile small{
+    text-wrap: nowrap;
+}
+ 
+
+
+@keyframes grow {
+
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+    
+}
