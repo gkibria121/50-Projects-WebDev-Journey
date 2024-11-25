@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Catch The Insect</title>
+</head>
+<body>
+    <div class="screen active"  id="welcome">
+        <h1 class="title">Catch the insect</h1>
+
+        <button class="btn" id="play">Play Game</button>
+    </div>
+
+    <div class="screen "  id="select" >
+        <h1 class="title">What is your "favorite" insect?</h1>
+
+        <ul class="insects">
+            <li class="insect">
+
+                <p>Fly</p>
+                <img src="http://pngimg.com/uploads/fly/fly_PNG3946.png" class="insect-img" alt="fly"> 
+            </li>
+            <li class="insect">
+                <p>Mosquito</p>
+                <img
+                   src="http://pngimg.com/uploads/mosquito/mosquito_PNG18175.png"
+                   class="insect-img"
+                   alt="mosquito"
+                   />
+            </li>
+            <li class="insect">
+                <p>Spider</p>
+                <img
+                   src="http://pngimg.com/uploads/spider/spider_PNG12.png"
+                   class="insect-img"
+                   alt="spider"
+                   />
+            </li>
+            <li class="insect">
+                <p>Roach</p>
+                <img
+                   src="http://pngimg.com/uploads/roach/roach_PNG12163.png"
+                   class="insect-img"
+                   alt="roach"
+                   />
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="screen " id="game-screen" >
+        <header class="score-board">
+            <h2>Time : <span id="time">00:12</span></h2>
+            <h2>Scroe : <span id="score">0</span></h2> 
+        </header>
+        <div class="game-board">
+
+    
+
+            
+        </div>
+        <div class="warning-box hidden">
+            <p>Are you annoyed yet?</p>
+            <p>You are playing an impossible game!</p>
+        </div>
+    </div>
+  
+    <script src="script.js"></script>
+</body>
+</html>

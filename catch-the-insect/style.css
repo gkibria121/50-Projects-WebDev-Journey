@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+html{
+    font-size: 62.25%;
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh; 
+    font-family: "Press Start 2P",sans-serif;  
+    background-color: dodgerblue;
+    color: white; 
+    overflow: hidden;
+    position: relative;
+}
+
+.screen{ 
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Press Start 2P",sans-serif;
+    justify-content: center;
+    align-items: center;
+    background-color: dodgerblue;
+    color: white;    
+    transition: top .4s ease;
+   
+    
+}
+.title{
+    font-size:  2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.btn{
+    padding: 1.2rem;
+    background-color: white;
+    color: dodgerblue;
+    font-family: inherit;
+    font-size: 1.4rem;
+    border: none;
+    cursor: pointer;
+}
+.btn:focus{
+    outline: none;
+}
+
+.screen.active{
+    transform:translate(0);
+    height: 100vh;
+}
+.insects {
+    margin-top: 3rem;
+
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    
+}
+.insect {
+    width: 11rem;
+    height: 11rem;
+    padding: 1rem;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+}
+.insect:hover { 
+
+    background-color: white;
+    color: dodgerblue;
+}
+.insect-img{
+    width: 5rem;
+    height: 5rem;
+  
+}
+.score-board{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 2rem;
+    justify-content: space-between;
+    width: 100vw;
+    height: 4rem;
+    z-index: 1;
+}
+
+.game-board{
+    position: relative;
+    height: 100%;
+    width: 100%;
+   
+}
+.screen.active{
+    animation: slide 1s  ease;
+    top: 0%;
+}
+
+@keyframes slide {
+
+    0%{
+        top: 100%;
+
+    }
+    100%{
+        top: 0%;
+    } 
+    
+}
+ 
+
+.insect-img.click-me{
+    --rotation :rotate(40deg) ;
+    animation: grow linear 1s; 
+    position: absolute;
+    transform: var(--rotation) scale(1);
+    transition: transform .4s ease;
+    cursor: pointer;
+}
+.insect-img.hide{
+    --rotation :rotate(40deg) ;
+    animation: shrink linear 1s; 
+    position: absolute;
+    transform: var(--rotation) scale(1);
+    transition: transform .4s ease;
+}
+@keyframes grow {
+
+    0%{
+        transform: var(--rotation)  scale(0);
+
+    }
+    100%{
+        transform: var(--rotation) scale(1);
+    }
+    
+}
+@keyframes shrink {
+    0%{
+        transform: var(--rotation) scale(1);
+    }
+    100%{
+        transform: var(--rotation)  scale(0);
+
+    }
+    
+    
+}
+
+.warning-box{
+    position: absolute;
+    top: 30%;
+    background-color: rgba(0,0,0,.5);
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    transition: top .4s ease;
+    
+
+}
+.warning-box.hidden{ 
+    top: -100%;
+}
